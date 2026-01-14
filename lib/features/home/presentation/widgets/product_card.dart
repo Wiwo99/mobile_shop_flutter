@@ -235,6 +235,15 @@ class _AddToCartButton extends StatelessWidget {
           color: product.availableColors.first,
         );
         context.read<CartCubit>().addToCart(cartItem);
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("${product.name} added to cart"),
+            duration: const Duration(seconds: 1),
+            behavior: SnackBarBehavior.floating,
+            backgroundColor: const Color(0xFF003D29),
+          ),
+        );
       },
       child: Container(
         padding: const EdgeInsets.all(6),

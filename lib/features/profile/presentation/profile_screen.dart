@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
 import '../../../core/presentation/widgets/common_widgets.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -13,6 +14,7 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
+              width: double.infinity,
               padding: const EdgeInsets.only(
                 top: 80,
                 bottom: 40,
